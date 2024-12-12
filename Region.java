@@ -7,4 +7,8 @@ class Region {
     
     boolean guessed;
 
+    String getQuestion(int difficulty) {
+        return questions[difficulty];
+    }
+
 }

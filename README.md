@@ -15,3 +15,6 @@ Le type département permet de simplifier la structuration des données dans le 
  - Questions (String[])
  - Découvert (boolean)
  
+# À rajouter après l'Alpha
+ - Possibilité de gagner 1/2 points si on devine le numéro du département
+ (ou alors 1 points pour le nom et 1 point pour le numéro + 1 point pour la région) --> enlever les questions du style "quel département de la région tatata porte le numéro tatata"
