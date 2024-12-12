@@ -29,8 +29,8 @@ class Fraquizz extends Program {
     Region pickRegion(Region[] regions) {
         Region region;
         do {
-            region = regions[(int) (random() * (length(regions) + 1))];
-        } while (region.guessed == false);
+            region = regions[(int) (random() * (length(regions)))];
+        } while (region.guessed == true);
         return region;
     }
 
@@ -60,14 +60,14 @@ class Fraquizz extends Program {
         println("-------------------------------------------------------");
         println("Appuye sur [Entrée] pour commencer à jouer.");
 
-        readChar();
+        readString();
 
         String diff;
         int difficulty = -1;
         do {
             println("Quelle difficulté veux-tu [facile/normal/difficile] ? ");
             diff = toLowerCase(readString());
-        } while (equals(diff, "facile") || equals(diff, "normal") || equals(diff, "difficile"));
+        } while (!(equals(diff, "facile") || equals(diff, "normal") || equals(diff, "difficile")));
 
         // Can't use switch case ;(
         if (equals(diff, "difficile")) {
@@ -101,8 +101,9 @@ class Fraquizz extends Program {
                 break;
             }
 
-            if (equals(answer, region.regionName)) {
-                println("Bravo ! C'était bien le département " + answer + ". Tu as gagné un point !");
+            if (equals(toLowerCase(answer), toLowerCase(region.regionName))) {
+                println("Bravo ! C'était bien le département " + region.regionName + ". Tu as gagné un point !");
+                score++;
             } else {
                 println("Dommage, c'était le département " + region.regionName + ". Tu n'as pas gagné de point ce coup-ci.");
             }
