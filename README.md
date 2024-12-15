@@ -15,7 +15,19 @@ Il suffit ensuite de taper le nom du département que l'on pense être la répon
 
 Pour arrêter le jeu, il suffit d'écrire STOP.
 
-## 2. Plans d'amélioration pour la suite
+## 2. Compilation et éxécution
+
+Le script "fraquizz" permet de compiler et d'éxécuter à la fois simplement et rapidement Fraquizz. Il ne prend qu'un seul argument. Voici comment il fonctionne : 
+ - Sans argument : compile et éxécute le jeu
+ - En passant "compile" : compile uniquement le jeu
+ - En passant "run" : lance le jeu (uniquement après compilation, sinon le jeu ne se lance pas)
+
+Notons que la commande "run" supprime également les fichiers de compilation du jeu à la fin de son éxécution. 
+
+Note : Fraquizz dépend uniquement de Java, car il embarque déjà une version de ap.jar pour iJava.
+
+
+## 3. Plans d'amélioration pour la suite
 
 Bien que cette version ne soit qu'une Alpha, nous avons prévu de nombreuses fonctionnalités supplémentaires. En voici la liste (liste non-exhaustive, car il se peut que nous ayons des idées en cours de route) :
  - Une carte de France en ASCII-Art, avec la séparation de tous les départements, qui se remplirait dynamiquement au fur et à mesure de la progression dans le jeu
