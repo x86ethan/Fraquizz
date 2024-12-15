@@ -1,20 +1,28 @@
 # Fraquizz
 
-## Quick notes
-- Affichage de l'emplacement du département si le joueur tombe au plus bas niveau (pour la dernière devinette)
+Voici une version alpha de Fraquizz, le jeu qui te fait apprendre les départements français et leurs spécificités en t'amusant !
 
-## Types à définir
-Voici une liste de types à définir pour le déroulement du projet
- 
-### 1. Type département
-Le type département permet de simplifier la structuration des données dans le jeu. Il permet la simlification des devinettes, en rassemblant les questions, numéros de départements, etc.
+## 1. Principe du jeu
 
-#### Attributs
- - Nom du département (String)
- - Numéro de département (int)
- - Questions (String[])
- - Découvert (boolean)
- 
-# À rajouter après l'Alpha
- - Possibilité de gagner 1/2 points si on devine le numéro du département
- (ou alors 1 points pour le nom et 1 point pour le numéro + 1 point pour la région) --> enlever les questions du style "quel département de la région tatata porte le numéro tatata"
+Le jeu consiste à deviner avec un choix de questions (à chaque fois facile, normal et difficile) un département.
+Les questions sont de type :
+ - Quel département des Hauts de France porte le numéro 59  ? (facile)
+ - Quel département abrite la ville de Lille, mondialement connue pour sa braderie annuelle ? (normal)
+ - Quel est le département le plus peuplé de France ? (difficile)
+
+Il suffit ensuite de taper le nom du département que l'on pense être la réponse à notre question.  
+*Notons qu'il n'est pas nécéssaire de le taper selon sa casse exacte, car les noms sont normalisés. Ainsi, "hauts de france" suffira pour le département "Hauts-de-France".*
+
+Pour arrêter le jeu, il suffit d'écrire STOP.
+
+## 2. Plans d'amélioration pour la suite
+
+Bien que cette version ne soit qu'une Alpha, nous avons prévu de nombreuses fonctionnalités supplémentaires. En voici la liste (liste non-exhaustive, car il se peut que nous ayons des idées en cours de route) :
+ - Une carte de France en ASCII-Art, avec la séparation de tous les départements, qui se remplirait dynamiquement au fur et à mesure de la progression dans le jeu
+ - La possibilité de sauvegarder sa partie, pour pouvoir continuer plus tard
+ - La sauvegarde du score dans un Leaderboards, qui serait accessible depuis une page web (enregistrement du pseudonyme de l'utilisateur pour les deux cas)
+ - Des questions supplémentaires pour les départements (par exemple, deux ou trois questions choisies aléatoirement pour chaque niveau)
+ - Un classement des départements selon leur niveau de difficulté*
+
+
+* Nous avons remarqué que certaines questions, comme celle des Landes (Quel département est connu pour ses plages immenses et ses forêts de pins ?) sont assez vagues et peu précises. Il serait donc préférable de classer ces questions comme difficiles, et d'autres plus faciles, comme celle de Paris (Quel département est la capitale de France et le plus peuplé ?)
