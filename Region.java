@@ -2,8 +2,12 @@ class Region {
 
     int regionNumber;
     String regionName;
+    String stateName;
+    String capitalCity;
 
     String[] questions;
+
+    int[] characters;
     
     boolean guessed;
 
